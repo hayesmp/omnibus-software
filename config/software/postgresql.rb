@@ -36,7 +36,7 @@ configure_env = {
 
 build do
   command ["./configure",
-           "--prefix=#{install_dir}/embedded",
+           "--prefix=#{install_dir}/embedded/postgres/9.2",
            "--with-libedit-preferred",
            "--with-openssl --with-includes=#{install_dir}/embedded/include",
            "--with-libraries=#{install_dir}/embedded/lib"].join(" "), :env => configure_env
