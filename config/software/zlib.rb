@@ -24,7 +24,7 @@ dependency "libgcc"
 #       we'll need to use a more robust link (sourceforge) that will
 #       not change over time.
 source :url => "http://downloads.sourceforge.net/project/libpng/zlib/1.2.5/zlib-1.2.5.tar.gz",
-       :md5 => "44d667c142d7cda120332623eab69f40"
+       :md5 => "c735eab2d659a96e5a594c9e8541ad63"
 
 relative_path "zlib-1.2.5"
 configure_env =
