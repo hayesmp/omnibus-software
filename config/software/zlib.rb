@@ -16,17 +16,17 @@
 #
 
 name "zlib"
-version "1.2.6"
+version "1.2.8"
 
 dependency "libgcc"
 
 # TODO: this link is subject to change with each new release of zlib.
 #       we'll need to use a more robust link (sourceforge) that will
 #       not change over time.
-source :url => "http://downloads.sourceforge.net/project/libpng/zlib/1.2.6/zlib-1.2.6.tar.gz",
+source :url => "http://downloads.sourceforge.net/project/libpng/zlib/1.2.8/zlib-1.2.8.tar.gz",
        :md5 => "618e944d7c7cd6521551e30b32322f4a"
 
-relative_path "zlib-1.2.6"
+relative_path "zlib-1.2.8"
 configure_env =
   case platform
   when "aix"
