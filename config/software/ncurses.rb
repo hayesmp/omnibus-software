@@ -90,7 +90,7 @@ build do
     patch :source => 'patch-aix-configure', :plevel => 0
   end
 
-  if platform == "mac_os_x"
+  if platform == "mac_os_x" || platform == "ubuntu"
     patch :source => '5.8-patch'
   end
 
