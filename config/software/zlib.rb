@@ -61,6 +61,12 @@ configure_env =
   end
 
 build do
+  if platform == 'ubuntu'
+    unless File.exists? File.expand_path("#{install_dir}/embedded/lib")
+      command "mkdir -p #{install_dir}/embedded/lib"
+    end
+  end
+
   command "./configure --prefix=#{install_dir}/embedded", :env => configure_env
   command "make -j #{max_build_jobs}"
   command "make install"
