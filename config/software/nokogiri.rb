@@ -26,9 +26,9 @@ build do
        "-v #{version}",
        "--",
        "--with-xml2-lib=#{install_dir}/embedded/lib",
-       "--with-xml2-include=#{install_dir}/embedded/include",
+       "--with-xml2-include=#{install_dir}/embedded/include/libxml2",
        "--with-xslt-lib=#{install_dir}/embedded/lib",
-       "--with-xslt-include=#{install_dir}/embedded/include",
+       "--with-xslt-include=#{install_dir}/embedded/include/libxslt",
        "--with-iconv-include=#{install_dir}/embedded/include",
        "--with-iconv-lib=#{install_dir}/embedded/lib"].join(" ")
 end
