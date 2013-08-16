@@ -59,7 +59,7 @@ build do
            # Ubuntu 10.04 reports: 2.6.32-38-server #83-Ubuntu SMP
            # However, they require libatomic-ops-dev and libaio
            #'--with-file-aio',
-           #'--with-libatomic'
+           '--with-libatomic'
           ].join(" "), :env => env
   # When building with -j > 1, make emits errors about "Jobserver cannot be reached"
   command "make", :env => env
