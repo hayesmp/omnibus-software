@@ -27,6 +27,11 @@ source :url => "http://downloads.sourceforge.net/project/libpng/zlib/1.2.6/zlib-
        :md5 => "618e944d7c7cd6521551e30b32322f4a"
 
 relative_path "zlib-1.2.6"
+
+unless File.exists? File.expand_path("#{install_dir}/embedded/lib")
+  command "mkdir -p #{install_dir}/embedded/lib"
+end
+
 configure_env =
   case platform
   when "aix"
@@ -61,12 +66,6 @@ configure_env =
   end
 
 build do
-  if platform == 'ubuntu'
-    unless File.exists? File.expand_path("#{install_dir}/embedded/lib")
-      command "mkdir -p #{install_dir}/embedded/lib"
-    end
-  end
-
   command "./configure --prefix=#{install_dir}/embedded", :env => configure_env
   command "make -j #{max_build_jobs}"
   command "make install"
