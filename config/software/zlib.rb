@@ -29,7 +29,7 @@ source :url => "http://downloads.sourceforge.net/project/libpng/zlib/1.2.6/zlib-
 relative_path "zlib-1.2.6"
 
 unless File.exists? File.expand_path("#{install_dir}/embedded/lib")
-  command "mkdir -p #{install_dir}/embedded/lib"
+  `mkdir -p #{install_dir}/embedded/lib`
 end
 
 configure_env =
